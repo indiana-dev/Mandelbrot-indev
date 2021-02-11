@@ -138,6 +138,8 @@ function loop() {
 
     if(cam.size < 0.000025 && draw_method == 0) {
         switch_to_64bits()
+    } else if (cam.size > 0.000025 && draw_method == 1) {
+        switch_to_34bits()
     }
 
     draw()
@@ -190,6 +192,11 @@ function draw() {
 
     // let draw_canvas = test_kernel.canvas
     // document.getElementsByTagName('body')[0].appendChild(draw_canvas);
+}
+
+function switch_to_34bits() {
+    draw_method = 0
+    setMaximumIterations(500)
 }
 
 function switch_to_64bits() {

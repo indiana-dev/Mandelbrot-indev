@@ -153,7 +153,7 @@ void main_32bits() {
         smooth_col = vec3(0.,0.,0.);
     }
 
-    smooth_col = palette(float(iteration_count));
+    //smooth_col = palette(float(iteration_count));
     gl_FragColor = vec4(smooth_col, 1.);
 
     // float iter_d = float(iteration_count);
